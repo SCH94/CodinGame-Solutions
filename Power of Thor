@@ -1,0 +1,36 @@
+
+var inputs = readline().split(' ');
+var lightX = parseInt(inputs[0]); // the X position of the light of power
+var lightY = parseInt(inputs[1]); // the Y position of the light of power
+var initialTX = parseInt(inputs[2]); // Thor's starting X position
+var initialTY = parseInt(inputs[3]); // Thor's starting Y position
+var ix = initialTX;
+var iy = initialTY;
+var lx = lightX;
+var ly = lightY;
+// game loop
+while (true) {
+    var remainingTurns = parseInt(readline()); // The remaining amount of turns Thor can move. Do not remove this line.
+
+    // Write an action using print()
+    // To debug: printErr('Debug messages...');
+var dirx = "";
+    var diry = "";
+    
+    if (ix > lx) {
+        dirx = "W";
+        ix--;
+    } else if (ix < lx) {
+        dirx = "E";
+        ix++;
+    }
+
+    if (iy > ly) {
+        diry = "N";
+        iy--;
+    } else if (iy < ly){
+        diry = "S";
+        iy++;
+    }    
+    print(dirx + diry);
+}
